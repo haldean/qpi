@@ -18,3 +18,11 @@ body {
   margin-top: -48pt;
   text-align: center;
 }
+
+audio {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  top: 50%;
+  margin-top: -20pt;
+}

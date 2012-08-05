@@ -25,3 +25,10 @@ def size():
 def empty():
   with _queue_lock:
     return not len(_queue)
+
+def remove(media_id):
+  with _queue_lock:
+    for i, item in enumerate(_queue):
+      if item.media_id == media_id:
+        del _queue[i]
+        return

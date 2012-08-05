@@ -8,11 +8,12 @@
 </form>
 
 <h2>Play local media</h2>
-<form method="POST" action="/upload">
-  <input type="file" name="file">
+<form method="POST" enctype="multipart/form-data" action="/upload">
+  <input type="file" name="file" multiple="">
   <input type="submit" value="add &raquo;">
 </form>
 
+{% if automation %}
 <h2>Light control</h2>
 <ul>
   <li>Floor lamp:
@@ -47,10 +48,14 @@ Voice control
   <option value="on">On</option>
   <option value="off">Off</option>
 </select>
+{% endif %}
 {% endblock %}
 
 {% block queue %}
 {% for item in queue %}
-<li>{{ item }}</li>
+<li>
+  {{ item }}
+  <a href="/delete/{{ item.media_id }}" class="remove-link">(remove)</a>
+</li>
 {% endfor %}
 {% endblock %}
