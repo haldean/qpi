@@ -2,13 +2,13 @@
 {% block subheading %} Index {% endblock %}
 {% block content %}
 <h2>Play online media</h2>
-<form method="POST" target="/url">
+<form method="POST" action="/url">
   <input type="text" name="url">
   <input type="submit" value="add &raquo;">
 </form>
 
 <h2>Play local media</h2>
-<form method="POST" target="/upload">
+<form method="POST" action="/upload">
   <input type="file" name="file">
   <input type="submit" value="add &raquo;">
 </form>
@@ -47,5 +47,10 @@ Voice control
   <option value="on">On</option>
   <option value="off">Off</option>
 </select>
+{% endblock %}
 
+{% block queue %}
+{% for item in queue %}
+<li>{{ item }}</li>
+{% endfor %}
 {% endblock %}

@@ -10,16 +10,42 @@ header {
   background: #AB0743;
   width: 100%;
   margin: 0;
-  padding: 0 20%;
+  padding: 3pt 20pt;
   color: #FFF;
 }
 
 header h1 {
   font-size: 14pt;
+  display: inline;
+}
+
+header a {
+  text-decoration: none;
+  color: #AAA;
+  margin-left: 6pt;
+  font-size: 12pt;
 }
 
 #content {
-  margin: 20pt 20%;
+  margin: 20pt;
+  width: 70%;
+}
+
+#queue {
+  position: fixed;
+  left: 70%;
+  top: 0;
+  width: 30%;
+}
+
+#queue ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#queue ul li {
+  margin-bottom: 5pt;
 }
 
 input, select {

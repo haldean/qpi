@@ -1,0 +1,36 @@
+{% extends 'media.html' %}
+{% block head %}
+<script src="/static/js/swfobject.js"></script>
+<script>
+  $.domReady(function() {
+    var params = {
+      allowScriptAccess: 'always',
+      autoplay: 1,
+    };
+
+    var atts = {
+      id: 'qpi-player',
+    };
+
+    swfobject.embedSWF(
+      "http://www.youtube.com/v/{{ item.video_id }}" +
+      "?enablejsapi=1&version=3&playerapiid=qpi-player&autoplay=1&autohide=1",
+      "youtube-player", window.innerWidth, window.innerHeight,
+      '8', null, null, params, atts);
+  });
+
+  function onYouTubePlayerReady(player_id) {
+    document.getElementById(player_id).addEventListener(
+    'onStateChange', 'playerStateChange');
+  }
+
+  function playerStateChange(state) {
+    if (state == 0) {
+      window.location.reload();
+    }
+  }
+</script>
+{% endblock %}
+{% block content %}
+<div id="youtube-player"></div>
+{% endblock %}

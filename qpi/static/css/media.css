@@ -1,0 +1,20 @@
+body {
+  background: #222;
+  color: #CCC;
+  font-family: 'CreteRoundRegular', sans-serif;
+  font-size: 48pt;
+  margin: 0;
+  text-shadow: 1pt 1pt 0pt #888;
+}
+
+#content {
+  margin: 0pt;
+}
+
+#empty {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -48pt;
+  text-align: center;
+}
