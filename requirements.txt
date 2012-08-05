@@ -1,0 +1,3 @@
+argparse
+flask>=0.9
+gdata>=2.0
