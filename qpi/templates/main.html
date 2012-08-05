@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block subheading %} Index {% endblock %}
+{% block content %}
+<h2>Play online media</h2>
+<form method="POST" target="/url">
+  <input type="text" name="url">
+  <input type="submit" value="add &raquo;">
+</form>
+
+<h2>Play local media</h2>
+<form method="POST" target="/upload">
+  <input type="file" name="file">
+  <input type="submit" value="add &raquo;">
+</form>
+
+<h2>Light control</h2>
+<ul>
+  <li>Floor lamp:
+  <select>
+    <option value="on">On</option>
+    <option value="off">Off</option>
+  </select>
+  </li>
+  <li>Piano light:
+  <select>
+    <option value="on">On</option>
+    <option value="off">Off</option>
+  </select>
+  </li>
+  <li>Camera lamp:
+  <select>
+    <option value="on">On</option>
+    <option value="off">Off</option>
+  </select>
+  </li>
+  <li>Lila desk lamp:
+  <select>
+    <option value="on">On</option>
+    <option value="off">Off</option>
+  </select>
+  </li>
+</ul>
+
+<h2>Voice control</h2>
+Voice control
+<select>
+  <option value="on">On</option>
+  <option value="off">Off</option>
+</select>
+
+{% endblock %}

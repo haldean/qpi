@@ -1,0 +1,40 @@
+body {
+  font-family: 'CreteRoundRegular', sans-serif;
+  margin: 0;
+  font-size: 14pt;
+}
+
+header {
+  position: fixed;
+  bottom: 0;
+  background: #AB0743;
+  width: 100%;
+  margin: 0;
+  padding: 0 20%;
+  color: #FFF;
+}
+
+header h1 {
+  font-size: 14pt;
+}
+
+#content {
+  margin: 20pt 20%;
+}
+
+input, select {
+  font-size: 14pt;
+  font-family: inherit;
+}
+
+input[type=text] {
+  width: 70%;
+}
+
+input[type=submit] {
+  margin: 2px;
+  font-size: 14pt;
+  border: none;
+  background: none;
+  font-family: inherit;
+}

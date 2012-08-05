@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>qpi</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/crete-font/stylesheet.css">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <h1>qpi: {% block subheading %}{% endblock %}</h1>
+    </header>
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
