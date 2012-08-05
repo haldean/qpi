@@ -21,6 +21,6 @@ setup(
 
     package_data = {
       '': ['README.md',],
-      'qpi': ['static', 'templates'],
+      'qpi': ['static/css/*', 'static/js/*', 'static/crete-font/*', 'templates/*'],
       }
     )
